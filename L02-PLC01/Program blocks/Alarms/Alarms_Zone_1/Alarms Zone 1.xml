@@ -541,7 +541,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Alarms Zone1" />
+        <Component Name="Alarms Zone11111" />
         <Component Name="E06-GS02" />
       </Symbol>
     </Access>
@@ -881,7 +881,7 @@
               <MultilingualTextItem ID="48" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>1.0. COMMUNICATION LOST WITH INVERTER OF MOTOR M02 OR ITS BREAKER IS TURNED OFF.</Text>
+                  <Text>1.0. COMMUNICATION LOST WITH INVERTER OF MOTOR M02 OR ITS BREAKER IS TURNED OFF lalalalalalalalaalalallal.</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="49" CompositionName="Items">
