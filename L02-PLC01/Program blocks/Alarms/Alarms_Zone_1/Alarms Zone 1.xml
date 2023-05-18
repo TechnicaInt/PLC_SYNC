@@ -319,7 +319,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Alarms Zone1" />
+        <Component Name="Alarms Zone11111" />
         <Component Name="E06-ES01" />
       </Symbol>
     </Access>
@@ -443,7 +443,7 @@
               <MultilingualTextItem ID="25" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>0.4. E06-ES02 EMERGENCY PUSH BUTTON ON PUSHER OPERATOR PANEL #2 IS PRESSED, RELEASE IT AND PRESS RESET</Text>
+                  <Text>lalalalalaalalalalal 0.4. E06-ES02 EMERGENCY PUSH BUTTON ON PUSHER OPERATOR PANEL #2 IS PRESSED, RELEASE IT AND PRESS RESET</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="26" CompositionName="Items">
