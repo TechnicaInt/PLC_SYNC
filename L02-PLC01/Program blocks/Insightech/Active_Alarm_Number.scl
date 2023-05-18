@@ -1,0 +1,58 @@
+﻿FUNCTION_BLOCK "Active_Alarm_Number"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Alarms_Array { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Array[0.."ALARM_ARRAY_SIZE"] of "ALARM";
+   END_VAR
+
+   VAR_OUTPUT 
+      First_Alarm_Group_Nb : DInt;
+   END_VAR
+
+   VAR_IN_OUT 
+      Stop_Reason_Value : DInt;
+   END_VAR
+
+   VAR 
+      i : Int;
+   END_VAR
+
+   VAR_TEMP 
+      Temp : Bool;
+   END_VAR
+
+
+BEGIN
+	        IF #Stop_Reason_Value = -1 THEN
+	            FOR #i := 0 TO "ALARM_ARRAY_SIZE" DO
+	                IF #Alarms_Array[#i].Active = 1 AND #"Alarms_Array"[#i].Group < 100 THEN
+	                    #First_Alarm_Group_Nb := #"Alarms_Array"[#i].Group;
+	                    #Stop_Reason_Value := #Alarms_Array[#i].Number;
+	                END_IF;
+	            END_FOR;
+	            ;
+	            
+	        ELSE
+	            #Temp := 0;
+	            FOR #i := 0 TO "ALARM_ARRAY_SIZE" DO
+	                IF #Alarms_Array[#i].Active = 1 AND #"Alarms_Array"[#i].Group < 100 THEN
+	                    #Temp := 1;
+	                    EXIT;
+	                END_IF;
+	            END_FOR;
+	            IF #Temp = 0 THEN
+	                #First_Alarm_Group_Nb := -1;
+	                #Stop_Reason_Value := -1;
+	                ;
+	            END_IF;
+	           
+	        END_IF;
+	        
+	        FOR #i := 0 TO "ALARM_ARRAY_SIZE" DO
+	            IF #Alarms_Array[#i].Number = #Stop_Reason_Value AND #Alarms_Array[#i].Active = 0 THEN
+	                #First_Alarm_Group_Nb := -1;
+	                #Stop_Reason_Value := -1;
+	            END_IF;
+	        END_FOR;
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,2678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2023-05-18T09:06:44.504616Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="ContinuousPusher_Nb" Datatype="Int" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>1</StartValue></Member>
+    <Member Name="StateValue" Datatype="Int" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Mode" Datatype="Int" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1: Manual Mode, 2:Production Mode</MultiLanguageText></Comment></Member>
+    <Member Name="CmdReset" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="IP_Homing_PushingServo" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="PE_Back_Detection" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="PE_Front_Detection" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="PE_90DegClearance" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="PE_0DegClearance" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_ResetPB01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_ResetPB02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_AccessPB01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_AccessPB02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="SSW_Manual" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="SSW_Production" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="SSW_CW" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="SSW_CCW" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Emergency_Stop01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Emergency_Stop02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Guard_Switch_Door01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Guard_Switch_Door02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="AL_COM_DFE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Safety_Relay" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Clock_1.25Hz" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="M01-Runnning" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="M02-Running" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="OP_ResetLamp01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Op_ResetLamp02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_AccessLamp01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="OP_AccessLamp02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="ST_GreenLamp" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="ST_YellowLamp" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Unlock_Guard_Switch01" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Unlock_Guard_Switch02" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="2. SM01_Pusher_Instance" Datatype="&quot;3. Continuous Pusher Drive Setup&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="ContinuousPusher_Nb" Datatype="Int" /><Member Name="Mode_Production" Datatype="Bool" /><Member Name="Mode_Manual" Datatype="Bool" /><Member Name="SysStart.State.Execute" Datatype="Bool" /><Member Name="SystStart.Cmd_Reset" Datatype="Bool" /><Member Name="SysStart.State.Aborted" Datatype="Bool" /><Member Name="SysStart.State.Reseting" Datatype="Bool" /><Member Name="On_Auto_Stopping" Datatype="Bool" /><Member Name="AL_COM_DFE" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="E0X-SM01" Datatype="&quot;100. SEW_Servo_3PD&quot;"><Sections><Section Name="Input"><Member Name="IO_ADDRESS" Datatype="Int" /><Member Name="VELOCITY" Datatype="Int" /><Member Name="TARGET_POSITION" Datatype="DInt" /><Member Name="Lin_Numerator" Datatype="DInt" /><Member Name="Lin_Denominator" Datatype="DInt" /><Member Name="IPOS_factor" Datatype="DInt" /></Section><Section Name="Output"><Member Name="STATUS_WORD1" Datatype="DInt" /><Member Name="FAULT_NO" Datatype="Int" /><Member Name="Actual_Position" Datatype="DInt" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Stepping" Datatype="Bool" /><Member Name="Control_bit_13" Datatype="Bool" /><Member Name="Control_bit_14" Datatype="Bool" /><Member Name="Status_bit11" Datatype="Bool" /><Member Name="Status_bit12" Datatype="Bool" /><Member Name="Status_bit13" Datatype="Bool" /><Member Name="Status_bit14" Datatype="Bool" /><Member Name="Status_bit15" Datatype="Bool" /><Member Name="Control_Inhibit" Datatype="Bool" /><Member Name="Enable_Rapid_Stop" Datatype="Bool" /><Member Name="Hold_Control" Datatype="Bool" /><Member Name="Ramp_Generator" Datatype="Bool" /><Member Name="Parameter_Set" Datatype="Bool" /><Member Name="Reset" Datatype="Bool" /><Member Name="Reserved" Datatype="Bool" /><Member Name="Start" Datatype="Bool" /><Member Name="Manual_CW" Datatype="Bool" /><Member Name="Manual_CCW" Datatype="Bool" /><Member Name="Reference_Travel" Datatype="Bool" /><Member Name="Write_Request" Datatype="Bool" /><Member Name="Enable_Output_Stage" Datatype="Bool" /><Member Name="Inverder_Ready" Datatype="Bool" /><Member Name="PO_Data_Enable" Datatype="Bool" /><Member Name="Active_Ramp_Generator" Datatype="Bool" /><Member Name="Active_Parameter" Datatype="Bool" /><Member Name="Fault" Datatype="Bool" /><Member Name="Limit_Switch_CW" Datatype="Bool" /><Member Name="Limit_Switch_CCW" Datatype="Bool" /><Member Name="Reference_OK" Datatype="Bool" /><Member Name="In_Position" Datatype="Bool" /><Member Name="Current_Limit" Datatype="Bool" /></Section></Sections></Member><Member Name="At_OpenPos" Datatype="&quot;101. In Position&quot;"><Sections><Section Name="Input"><Member Name="Bypass_Min" Datatype="Bool" /><Member Name="Bypass_Max" Datatype="Bool" /><Member Name="Target_Position" Datatype="DInt" /><Member Name="Margin" Datatype="DInt" /><Member Name="Actual_Position" Datatype="DInt" /></Section><Section Name="Output"><Member Name="INPOS" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static" /></Sections></Member><Member Name="TON_Optimize1" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_Optimize2" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_GoPushingPos" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TP_Homing" Datatype="TP_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Pulse_Homing" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="3. Continuous Pusher Control_Instance" Datatype="&quot;4. Continuous Pusher Control&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="ContinuousPusher_Nb" Datatype="Int" /><Member Name="On_Auto" Datatype="Bool" /><Member Name="Mode_Manual" Datatype="Bool" /><Member Name="Mode_Production" Datatype="Bool" /><Member Name="SysStart.State.Resetting" Datatype="Bool" /><Member Name="SysStart.State.Aborted" Datatype="Bool" /><Member Name="SystStart.Cmd_Reset" Datatype="Bool" /><Member Name="SysStart.State.Execute" Datatype="Bool" /><Member Name="M01Running" Datatype="Bool" /><Member Name="M02Running" Datatype="Bool" /></Section><Section Name="Output"><Member Name="StopM01M02" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="E0X-SM01" Datatype="&quot;100. SEW_Servo_3PD&quot;"><Sections><Section Name="Input"><Member Name="IO_ADDRESS" Datatype="Int" /><Member Name="VELOCITY" Datatype="Int" /><Member Name="TARGET_POSITION" Datatype="DInt" /><Member Name="Lin_Numerator" Datatype="DInt" /><Member Name="Lin_Denominator" Datatype="DInt" /><Member Name="IPOS_factor" Datatype="DInt" /></Section><Section Name="Output"><Member Name="STATUS_WORD1" Datatype="DInt" /><Member Name="FAULT_NO" Datatype="Int" /><Member Name="Actual_Position" Datatype="DInt" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Stepping" Datatype="Bool" /><Member Name="Control_bit_13" Datatype="Bool" /><Member Name="Control_bit_14" Datatype="Bool" /><Member Name="Status_bit11" Datatype="Bool" /><Member Name="Status_bit12" Datatype="Bool" /><Member Name="Status_bit13" Datatype="Bool" /><Member Name="Status_bit14" Datatype="Bool" /><Member Name="Status_bit15" Datatype="Bool" /><Member Name="Control_Inhibit" Datatype="Bool" /><Member Name="Enable_Rapid_Stop" Datatype="Bool" /><Member Name="Hold_Control" Datatype="Bool" /><Member Name="Ramp_Generator" Datatype="Bool" /><Member Name="Parameter_Set" Datatype="Bool" /><Member Name="Reset" Datatype="Bool" /><Member Name="Reserved" Datatype="Bool" /><Member Name="Start" Datatype="Bool" /><Member Name="Manual_CW" Datatype="Bool" /><Member Name="Manual_CCW" Datatype="Bool" /><Member Name="Reference_Travel" Datatype="Bool" /><Member Name="Write_Request" Datatype="Bool" /><Member Name="Enable_Output_Stage" Datatype="Bool" /><Member Name="Inverder_Ready" Datatype="Bool" /><Member Name="PO_Data_Enable" Datatype="Bool" /><Member Name="Active_Ramp_Generator" Datatype="Bool" /><Member Name="Active_Parameter" Datatype="Bool" /><Member Name="Fault" Datatype="Bool" /><Member Name="Limit_Switch_CW" Datatype="Bool" /><Member Name="Limit_Switch_CCW" Datatype="Bool" /><Member Name="Reference_OK" Datatype="Bool" /><Member Name="In_Position" Datatype="Bool" /><Member Name="Current_Limit" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_PushCarton" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_1_StopConv" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_2_StopConv" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_ResetStopInfeed" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_DelayedStart" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Pulse_Start" Datatype="Bool" /><Member Name="Pulse_DelayedStart" Datatype="Bool" /><Member Name="At_OpenPos" Datatype="&quot;101. In Position&quot;"><Sections><Section Name="Input"><Member Name="Bypass_Min" Datatype="Bool" /><Member Name="Bypass_Max" Datatype="Bool" /><Member Name="Target_Position" Datatype="DInt" /><Member Name="Margin" Datatype="DInt" /><Member Name="Actual_Position" Datatype="DInt" /></Section><Section Name="Output"><Member Name="INPOS" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static" /></Sections></Member><Member Name="At_ClosePos" Datatype="&quot;101. In Position&quot;"><Sections><Section Name="Input"><Member Name="Bypass_Min" Datatype="Bool" /><Member Name="Bypass_Max" Datatype="Bool" /><Member Name="Target_Position" Datatype="DInt" /><Member Name="Margin" Datatype="DInt" /><Member Name="Actual_Position" Datatype="DInt" /></Section><Section Name="Output"><Member Name="INPOS" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static" /></Sections></Member><Member Name="Pulse_CartonSize" Datatype="Bool" /><Member Name="Pulse_CartonArrived" Datatype="Bool" /><Member Name="Pulse_SmallCarton" Datatype="Bool" /><Member Name="Pulse_GS_Alarm" Datatype="Bool" /><Member Name="DoorClosed" Datatype="Bool" /><Member Name="DelayedStart" Datatype="Bool" /><Member Name="NotInPosition" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="4. Continuous Pusher Alarms Control_Instance" Datatype="&quot;5. Continuous Pusher Alarms Control&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="ContinuousPusher_Nb" Datatype="Int" /><Member Name="On_Auto" Datatype="Bool" /><Member Name="On_Auto_Stopping" Datatype="Bool" /><Member Name="Mode_Manual" Datatype="Bool" /><Member Name="Mode_Production" Datatype="Bool" /><Member Name="SysStart.State.Resetting" Datatype="Bool" /><Member Name="SysStart.State.Aborted" Datatype="Bool" /><Member Name="SystStart.Cmd_Reset" Datatype="Bool" /><Member Name="SysStart.State.Execute" Datatype="Bool" /><Member Name="SafetyRelay" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="TON_AL_CommLost_E0X-SM01" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_Homing_E0X-SM01" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_Not_Referenced_E0X-SM01" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_Set_Gap" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_SetAlarmGap" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_ResetGap" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_ResetAlarmGap" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_AL_Faulted_E0X_SM01" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_0DegClear" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_90DegClear" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="5. Continuous Pusher HMI_Instance" Datatype="&quot;6. Continuous Pusher HMI&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="On_Auto" Datatype="Bool" /><Member Name="On_Manual" Datatype="Bool" /><Member Name="HMI_VIS_Control_Zone" Datatype="Bool" /><Member Name="HMI_VIS_MMO_ZoneX" Datatype="Bool" /><Member Name="Error_Bit_Common" Datatype="Bool" /><Member Name="Error_Bit_Zone" Datatype="Bool" /></Section><Section Name="Output"><Member Name="HMI_VIS_Jog_ZoneX" Datatype="Bool" /><Member Name="HMI_VIS_Alarm_ZoneX" Datatype="Bool" /><Member Name="HMI_App_Reset_ZoneX" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Pulse_Operating_Hours" Datatype="Bool" /><Member Name="TON_Operating_Hours" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TOF_Operating_Hours" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Pulse_CycleTime" Datatype="Bool" /><Member Name="New_Time" Datatype="DTL" Version="1.0" /><Member Name="Old_Time" Datatype="DTL" Version="1.0" /><Member Name="Cycle_Time" Datatype="Time" /></Section></Sections></Member>
+    <Member Name="7. Access Doors_Instance" Datatype="&quot;7. Access Doorss&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="SteExecute" Datatype="Bool" /><Member Name="SteStopped" Datatype="Bool" /><Member Name="SteAborted" Datatype="Bool" /><Member Name="MotorsRunning" Datatype="Bool" /><Member Name="Clock" Datatype="Bool" /><Member Name="GS01" Datatype="Bool" /><Member Name="GS02" Datatype="Bool" /><Member Name="AccessRequest01" Datatype="Bool" /></Section><Section Name="Output"><Member Name="YellowLamp01" Datatype="Bool" /><Member Name="YellowLamp02" Datatype="Bool" /><Member Name="GSC01" Datatype="Bool" /><Member Name="GSC02" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Door1" Datatype="&quot;102. Access Doors&quot;"><Sections><Section Name="Input"><Member Name="ACCESS_REQUEST" Datatype="Bool" /><Member Name="GS" Datatype="Bool" /><Member Name="SYS_STARTED" Datatype="Bool" /><Member Name="NO_MOTION" Datatype="Bool" /><Member Name="MOTORS_ON" Datatype="Bool" /><Member Name="CLOCK" Datatype="Bool" /><Member Name="SYS_ABORTED" Datatype="Bool" /></Section><Section Name="Output"><Member Name="YELLOW_LAMP" Datatype="Bool" /><Member Name="UNLOCK_GS" Datatype="Bool" /><Member Name="TURN MOTORS OFF" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="ACCESS_RIGHT" Datatype="Bool" /><Member Name="COIL ON INPUT" Datatype="Bool" /><Member Name="PULSE1" Datatype="Bool" /><Member Name="PULSE2" Datatype="Bool" /><Member Name="IEC_Timer_2_Instance" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="IEC_Timer_1_Instance" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="8. System Lamps_Instance" Datatype="&quot;8. System Lamps&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="ContinuousPusher_Nb" Datatype="Int" /><Member Name="StateValue" Datatype="Int" /><Member Name="Clock_1.25Hz" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="LampsLogic" Datatype="&quot;103. LampsLogic_Customized&quot;"><Sections><Section Name="Input"><Member Name="PackML Ste_Value" Datatype="DInt" /><Member Name="Alarm_Blue" Datatype="Bool" /><Member Name="Alarm_Yellow" Datatype="Bool" /><Member Name="Alarm_Buzzer" Datatype="Bool" /><Member Name="Deactivate_Internal_Clock" Datatype="Bool" /><Member Name="Buzzer_Enabled" Datatype="Bool" /><Member Name="External_Clock" Datatype="Bool" /><Member Name="On_Clock_Time" Datatype="Time" /><Member Name="Off_Clock_Time" Datatype="Time" /></Section><Section Name="Output"><Member Name="Start PB Lamp" Datatype="Bool" /><Member Name="Stop PB Lamp" Datatype="Bool" /><Member Name="Reset PB Lamp" Datatype="Bool" /><Member Name="Start/Green Lamp" Datatype="Bool" /><Member Name="Stop/Red Lamp" Datatype="Bool" /><Member Name="Blue Lamp" Datatype="Bool" /><Member Name="Yellow Lamp" Datatype="Bool" /><Member Name="Buzzer" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="On_Timer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Off_Timer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Clock" Datatype="Bool" /><Member Name="TOF_Execute" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="9. Error &amp; Blinking Bits_Instance" Datatype="&quot;9. Error &amp; Blinking Bits&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="ContinuousPusher_Nb" Datatype="Int" /></Section><Section Name="Output" /><Section Name="InOut" /><Section Name="Static" /></Sections></Member>
+    <Member Name="Ste_Execute" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Ste_Aborted" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Ste_Resetting" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Ste_Stopping" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Ste_Stopped" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Manual" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Production" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="On_Auto" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="On_Auto_Stopping" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ContinuousPusher_Main</Name>
+      <Number>3</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>6</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Ste_Stopped" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="28">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>9</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Ste_Aborted" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>15</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="Ste_Resetting" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="34">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>7</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="Ste_Stopping" />
+      </Symbol>
+    </Access>
+    <Part Name="Eq" UId="36">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="37" />
+    <Part Name="Eq" UId="38">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="39" />
+    <Part Name="Eq" UId="40">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="41" />
+    <Part Name="Eq" UId="42">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="43" />
+    <Part Name="Eq" UId="44">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="45" />
+  </Parts>
+  <Wires>
+    <Wire UId="46">
+      <Powerrail />
+      <NameCon UId="36" Name="pre" />
+      <NameCon UId="38" Name="pre" />
+      <NameCon UId="40" Name="pre" />
+      <NameCon UId="42" Name="pre" />
+      <NameCon UId="44" Name="pre" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="in1" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="in2" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="in1" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="in2" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="27" />
+      <NameCon UId="40" Name="in1" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="28" />
+      <NameCon UId="40" Name="in2" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <IdentCon UId="29" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="in1" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="31" />
+      <NameCon UId="42" Name="in2" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="32" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="33" />
+      <NameCon UId="44" Name="in1" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="34" />
+      <NameCon UId="44" Name="in2" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="35" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>State Values</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Mode" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Mode" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Part Name="Eq" UId="27">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="28" />
+    <Part Name="Eq" UId="29">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <Powerrail />
+      <NameCon UId="27" Name="pre" />
+      <NameCon UId="29" Name="pre" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="in1" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="in2" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="in1" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="in2" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="26" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Modes</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="On_Auto" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="25" />
+    <Part Name="Contact" UId="26" />
+    <Part Name="Contact" UId="27">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="28" />
+  </Parts>
+  <Wires>
+    <Wire UId="29">
+      <Powerrail />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="31">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="33">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>On Auto Bit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Ste_Stopping" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="On_Auto_Stopping" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26" />
+    <Part Name="Contact" UId="27" />
+    <Part Name="O" UId="28">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="29" />
+    <Part Name="Contact" UId="30">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="31" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+      <NameCon UId="27" Name="in" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="28" Name="in1" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="operand" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="in2" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>On Auto Stopping Bit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">Safety Inputs</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="GlobalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="ContinuousPusher_Diag" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="Pusher" UId="28">
+        <Token Text="[" UId="29" />
+        <Access Scope="LocalVariable" UId="30">
+          <Symbol UId="31">
+            <Component Name="ContinuousPusher_Nb" UId="32" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="33" />
+      </Component>
+      <Token Text="." UId="34" />
+      <Component Name="Safety_Inputs" UId="35" />
+      <Token Text="." UId="36" />
+      <Component Name="Emergency_Stop01" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text=":=" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LocalVariable" UId="41">
+    <Symbol UId="42">
+      <Component Name="Emergency_Stop01" UId="43" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="44" />
+  <NewLine Num="1" UId="45" />
+  <Access Scope="GlobalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="ContinuousPusher_Diag" UId="48" />
+      <Token Text="." UId="49" />
+      <Component Name="Pusher" UId="50">
+        <Token Text="[" UId="51" />
+        <Access Scope="LocalVariable" UId="52">
+          <Symbol UId="53">
+            <Component Name="ContinuousPusher_Nb" UId="54" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="55" />
+      </Component>
+      <Token Text="." UId="56" />
+      <Component Name="Safety_Inputs" UId="57" />
+      <Token Text="." UId="58" />
+      <Component Name="Emergency_Stop02" UId="59" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="60" />
+  <Token Text=":=" UId="61" />
+  <Blank Num="1" UId="62" />
+  <Access Scope="LocalVariable" UId="63">
+    <Symbol UId="64">
+      <Component Name="Emergency_Stop02" UId="65" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="66" />
+  <NewLine Num="1" UId="67" />
+  <Access Scope="GlobalVariable" UId="68">
+    <Symbol UId="69">
+      <Component Name="ContinuousPusher_Diag" UId="70" />
+      <Token Text="." UId="71" />
+      <Component Name="Pusher" UId="72">
+        <Token Text="[" UId="73" />
+        <Access Scope="LocalVariable" UId="74">
+          <Symbol UId="75">
+            <Component Name="ContinuousPusher_Nb" UId="76" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="77" />
+      </Component>
+      <Token Text="." UId="78" />
+      <Component Name="Safety_Inputs" UId="79" />
+      <Token Text="." UId="80" />
+      <Component Name="Guard_Switch_Door01" UId="81" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="82" />
+  <Token Text=":=" UId="83" />
+  <Blank Num="1" UId="84" />
+  <Access Scope="LocalVariable" UId="85">
+    <Symbol UId="86">
+      <Component Name="Guard_Switch_Door01" UId="87" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="88" />
+  <NewLine Num="1" UId="89" />
+  <Access Scope="GlobalVariable" UId="90">
+    <Symbol UId="91">
+      <Component Name="ContinuousPusher_Diag" UId="92" />
+      <Token Text="." UId="93" />
+      <Component Name="Pusher" UId="94">
+        <Token Text="[" UId="95" />
+        <Access Scope="LocalVariable" UId="96">
+          <Symbol UId="97">
+            <Component Name="ContinuousPusher_Nb" UId="98" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="99" />
+      </Component>
+      <Token Text="." UId="100" />
+      <Component Name="Safety_Inputs" UId="101" />
+      <Token Text="." UId="102" />
+      <Component Name="Guard_Switch_Door02" UId="103" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="104" />
+  <Token Text=":=" UId="105" />
+  <Blank Num="1" UId="106" />
+  <Access Scope="LocalVariable" UId="107">
+    <Symbol UId="108">
+      <Component Name="Guard_Switch_Door02" UId="109" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="110" />
+  <NewLine Num="2" UId="111" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="112">
+    <Text UId="113">Reset PB</Text>
+  </LineComment>
+  <NewLine Num="1" UId="114" />
+  <Access Scope="GlobalVariable" UId="115">
+    <Symbol UId="116">
+      <Component Name="ContinuousPusher_Diag" UId="117" />
+      <Token Text="." UId="118" />
+      <Component Name="Pusher" UId="119">
+        <Token Text="[" UId="120" />
+        <Access Scope="LocalVariable" UId="121">
+          <Symbol UId="122">
+            <Component Name="ContinuousPusher_Nb" UId="123" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="124" />
+      </Component>
+      <Token Text="." UId="125" />
+      <Component Name="Inputs" UId="126" />
+      <Token Text="." UId="127" />
+      <Component Name="OP_ResetPB01" UId="128" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="129" />
+  <Token Text=":=" UId="130" />
+  <Blank Num="1" UId="131" />
+  <Access Scope="LocalVariable" UId="132">
+    <Symbol UId="133">
+      <Component Name="OP_ResetPB01" UId="134" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="135" />
+  <NewLine Num="1" UId="136" />
+  <Access Scope="GlobalVariable" UId="137">
+    <Symbol UId="138">
+      <Component Name="ContinuousPusher_Diag" UId="139" />
+      <Token Text="." UId="140" />
+      <Component Name="Pusher" UId="141">
+        <Token Text="[" UId="142" />
+        <Access Scope="LocalVariable" UId="143">
+          <Symbol UId="144">
+            <Component Name="ContinuousPusher_Nb" UId="145" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="146" />
+      </Component>
+      <Token Text="." UId="147" />
+      <Component Name="Inputs" UId="148" />
+      <Token Text="." UId="149" />
+      <Component Name="OP_ResetPB02" UId="150" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="151" />
+  <Token Text=":=" UId="152" />
+  <Blank Num="1" UId="153" />
+  <Access Scope="LocalVariable" UId="154">
+    <Symbol UId="155">
+      <Component Name="OP_ResetPB02" UId="156" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="157" />
+  <NewLine Num="2" UId="158" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="159">
+    <Text UId="160">Access PB</Text>
+  </LineComment>
+  <NewLine Num="1" UId="161" />
+  <Access Scope="GlobalVariable" UId="162">
+    <Symbol UId="163">
+      <Component Name="ContinuousPusher_Diag" UId="164" />
+      <Token Text="." UId="165" />
+      <Component Name="Pusher" UId="166">
+        <Token Text="[" UId="167" />
+        <Access Scope="LocalVariable" UId="168">
+          <Symbol UId="169">
+            <Component Name="ContinuousPusher_Nb" UId="170" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="171" />
+      </Component>
+      <Token Text="." UId="172" />
+      <Component Name="Inputs" UId="173" />
+      <Token Text="." UId="174" />
+      <Component Name="OP_AccessPB01" UId="175" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="176" />
+  <Token Text=":=" UId="177" />
+  <Blank Num="1" UId="178" />
+  <Access Scope="LocalVariable" UId="179">
+    <Symbol UId="180">
+      <Component Name="OP_AccessPB01" UId="181" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="182" />
+  <NewLine Num="1" UId="183" />
+  <Access Scope="GlobalVariable" UId="184">
+    <Symbol UId="185">
+      <Component Name="ContinuousPusher_Diag" UId="186" />
+      <Token Text="." UId="187" />
+      <Component Name="Pusher" UId="188">
+        <Token Text="[" UId="189" />
+        <Access Scope="LocalVariable" UId="190">
+          <Symbol UId="191">
+            <Component Name="ContinuousPusher_Nb" UId="192" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="193" />
+      </Component>
+      <Token Text="." UId="194" />
+      <Component Name="Inputs" UId="195" />
+      <Token Text="." UId="196" />
+      <Component Name="OP_AccessPB02" UId="197" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="198" />
+  <Token Text=":=" UId="199" />
+  <Blank Num="1" UId="200" />
+  <Access Scope="LocalVariable" UId="201">
+    <Symbol UId="202">
+      <Component Name="OP_AccessPB02" UId="203" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="204" />
+  <NewLine Num="2" UId="205" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="206">
+    <Text UId="207">Photocells</Text>
+  </LineComment>
+  <NewLine Num="1" UId="208" />
+  <Access Scope="GlobalVariable" UId="209">
+    <Symbol UId="210">
+      <Component Name="ContinuousPusher_Diag" UId="211" />
+      <Token Text="." UId="212" />
+      <Component Name="Pusher" UId="213">
+        <Token Text="[" UId="214" />
+        <Access Scope="LocalVariable" UId="215">
+          <Symbol UId="216">
+            <Component Name="ContinuousPusher_Nb" UId="217" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="218" />
+      </Component>
+      <Token Text="." UId="219" />
+      <Component Name="Inputs" UId="220" />
+      <Token Text="." UId="221" />
+      <Component Name="PE_Back_Detection" UId="222" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="223" />
+  <Token Text=":=" UId="224" />
+  <Blank Num="1" UId="225" />
+  <Access Scope="LocalVariable" UId="226">
+    <Symbol UId="227">
+      <Component Name="PE_Back_Detection" UId="228" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="229" />
+  <NewLine Num="1" UId="230" />
+  <Access Scope="GlobalVariable" UId="231">
+    <Symbol UId="232">
+      <Component Name="ContinuousPusher_Diag" UId="233" />
+      <Token Text="." UId="234" />
+      <Component Name="Pusher" UId="235">
+        <Token Text="[" UId="236" />
+        <Access Scope="LocalVariable" UId="237">
+          <Symbol UId="238">
+            <Component Name="ContinuousPusher_Nb" UId="239" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="240" />
+      </Component>
+      <Token Text="." UId="241" />
+      <Component Name="Inputs" UId="242" />
+      <Token Text="." UId="243" />
+      <Component Name="PE_Front_Detection" UId="244" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="245" />
+  <Token Text=":=" UId="246" />
+  <Blank Num="1" UId="247" />
+  <Access Scope="LocalVariable" UId="248">
+    <Symbol UId="249">
+      <Component Name="PE_Front_Detection" UId="250" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="251" />
+  <NewLine Num="1" UId="252" />
+  <Access Scope="GlobalVariable" UId="253">
+    <Symbol UId="254">
+      <Component Name="ContinuousPusher_Diag" UId="255" />
+      <Token Text="." UId="256" />
+      <Component Name="Pusher" UId="257">
+        <Token Text="[" UId="258" />
+        <Access Scope="LocalVariable" UId="259">
+          <Symbol UId="260">
+            <Component Name="ContinuousPusher_Nb" UId="261" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="262" />
+      </Component>
+      <Token Text="." UId="263" />
+      <Component Name="Inputs" UId="264" />
+      <Token Text="." UId="265" />
+      <Component Name="PE_0DegClearance" UId="266" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="267" />
+  <Token Text=":=" UId="268" />
+  <Blank Num="1" UId="269" />
+  <Access Scope="LocalVariable" UId="270">
+    <Symbol UId="271">
+      <Component Name="PE_0DegClearance" UId="272" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="273" />
+  <NewLine Num="1" UId="274" />
+  <Access Scope="GlobalVariable" UId="275">
+    <Symbol UId="276">
+      <Component Name="ContinuousPusher_Diag" UId="277" />
+      <Token Text="." UId="278" />
+      <Component Name="Pusher" UId="279">
+        <Token Text="[" UId="280" />
+        <Access Scope="LocalVariable" UId="281">
+          <Symbol UId="282">
+            <Component Name="ContinuousPusher_Nb" UId="283" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="284" />
+      </Component>
+      <Token Text="." UId="285" />
+      <Component Name="Inputs" UId="286" />
+      <Token Text="." UId="287" />
+      <Component Name="PE_90DegClearance" UId="288" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="289" />
+  <Token Text=":=" UId="290" />
+  <Blank Num="1" UId="291" />
+  <Access Scope="LocalVariable" UId="292">
+    <Symbol UId="293">
+      <Component Name="PE_90DegClearance" UId="294" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="295" />
+  <NewLine Num="2" UId="296" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="297">
+    <Text UId="298">Inductive Proximity (Homing)</Text>
+  </LineComment>
+  <NewLine Num="1" UId="299" />
+  <Access Scope="GlobalVariable" UId="300">
+    <Symbol UId="301">
+      <Component Name="ContinuousPusher_Diag" UId="302" />
+      <Token Text="." UId="303" />
+      <Component Name="Pusher" UId="304">
+        <Token Text="[" UId="305" />
+        <Access Scope="LocalVariable" UId="306">
+          <Symbol UId="307">
+            <Component Name="ContinuousPusher_Nb" UId="308" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="309" />
+      </Component>
+      <Token Text="." UId="310" />
+      <Component Name="Inputs" UId="311" />
+      <Token Text="." UId="312" />
+      <Component Name="IP_Homing_PushingServo" UId="313" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="314" />
+  <Token Text=":=" UId="315" />
+  <Blank Num="1" UId="316" />
+  <Access Scope="LocalVariable" UId="317">
+    <Symbol UId="318">
+      <Component Name="IP_Homing_PushingServo" UId="319" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="320" />
+  <NewLine Num="2" UId="321" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="322">
+    <Text UId="323">Selector Switch</Text>
+  </LineComment>
+  <NewLine Num="1" UId="324" />
+  <Access Scope="GlobalVariable" UId="325">
+    <Symbol UId="326">
+      <Component Name="ContinuousPusher_Diag" UId="327" />
+      <Token Text="." UId="328" />
+      <Component Name="Pusher" UId="329">
+        <Token Text="[" UId="330" />
+        <Access Scope="LocalVariable" UId="331">
+          <Symbol UId="332">
+            <Component Name="ContinuousPusher_Nb" UId="333" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="334" />
+      </Component>
+      <Token Text="." UId="335" />
+      <Component Name="Inputs" UId="336" />
+      <Token Text="." UId="337" />
+      <Component Name="SSW_Manual" UId="338" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="339" />
+  <Token Text=":=" UId="340" />
+  <Blank Num="1" UId="341" />
+  <Access Scope="LocalVariable" UId="342">
+    <Symbol UId="343">
+      <Component Name="SSW_Manual" UId="344" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="345" />
+  <NewLine Num="1" UId="346" />
+  <Access Scope="GlobalVariable" UId="347">
+    <Symbol UId="348">
+      <Component Name="ContinuousPusher_Diag" UId="349" />
+      <Token Text="." UId="350" />
+      <Component Name="Pusher" UId="351">
+        <Token Text="[" UId="352" />
+        <Access Scope="LocalVariable" UId="353">
+          <Symbol UId="354">
+            <Component Name="ContinuousPusher_Nb" UId="355" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="356" />
+      </Component>
+      <Token Text="." UId="357" />
+      <Component Name="Inputs" UId="358" />
+      <Token Text="." UId="359" />
+      <Component Name="SSW_Production" UId="360" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="361" />
+  <Token Text=":=" UId="362" />
+  <Blank Num="1" UId="363" />
+  <Access Scope="LocalVariable" UId="364">
+    <Symbol UId="365">
+      <Component Name="SSW_Production" UId="366" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="367" />
+  <NewLine Num="1" UId="368" />
+  <Access Scope="GlobalVariable" UId="369">
+    <Symbol UId="370">
+      <Component Name="ContinuousPusher_Diag" UId="371" />
+      <Token Text="." UId="372" />
+      <Component Name="Pusher" UId="373">
+        <Token Text="[" UId="374" />
+        <Access Scope="LocalVariable" UId="375">
+          <Symbol UId="376">
+            <Component Name="ContinuousPusher_Nb" UId="377" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="378" />
+      </Component>
+      <Token Text="." UId="379" />
+      <Component Name="Inputs" UId="380" />
+      <Token Text="." UId="381" />
+      <Component Name="SSW_CW" UId="382" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="383" />
+  <Token Text=":=" UId="384" />
+  <Blank Num="1" UId="385" />
+  <Access Scope="LocalVariable" UId="386">
+    <Symbol UId="387">
+      <Component Name="SSW_CW" UId="388" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="389" />
+  <NewLine Num="1" UId="390" />
+  <Access Scope="GlobalVariable" UId="391">
+    <Symbol UId="392">
+      <Component Name="ContinuousPusher_Diag" UId="393" />
+      <Token Text="." UId="394" />
+      <Component Name="Pusher" UId="395">
+        <Token Text="[" UId="396" />
+        <Access Scope="LocalVariable" UId="397">
+          <Symbol UId="398">
+            <Component Name="ContinuousPusher_Nb" UId="399" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="400" />
+      </Component>
+      <Token Text="." UId="401" />
+      <Component Name="Inputs" UId="402" />
+      <Token Text="." UId="403" />
+      <Component Name="SSW_CCW" UId="404" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="405" />
+  <Token Text=":=" UId="406" />
+  <Blank Num="1" UId="407" />
+  <Access Scope="LocalVariable" UId="408">
+    <Symbol UId="409">
+      <Component Name="SSW_CCW" UId="410" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="411" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="21" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>1. ContinuousPusher_Inputs</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">Safety Outputs</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="LocalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="Unlock_Guard_Switch01" UId="26" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="27" />
+  <Token Text=":=" UId="28" />
+  <Blank Num="1" UId="29" />
+  <Access Scope="GlobalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="ContinuousPusher_Diag" UId="32" />
+      <Token Text="." UId="33" />
+      <Component Name="Pusher" UId="34">
+        <Token Text="[" UId="35" />
+        <Access Scope="LocalVariable" UId="36">
+          <Symbol UId="37">
+            <Component Name="ContinuousPusher_Nb" UId="38" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="39" />
+      </Component>
+      <Token Text="." UId="40" />
+      <Component Name="Safety_Outputs" UId="41" />
+      <Token Text="." UId="42" />
+      <Component Name="Unlock_Guard_Switch01" UId="43" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="44" />
+  <NewLine Num="1" UId="45" />
+  <Access Scope="LocalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="Unlock_Guard_Switch02" UId="48" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="49" />
+  <Token Text=":=" UId="50" />
+  <Blank Num="1" UId="51" />
+  <Access Scope="GlobalVariable" UId="52">
+    <Symbol UId="53">
+      <Component Name="ContinuousPusher_Diag" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="Pusher" UId="56">
+        <Token Text="[" UId="57" />
+        <Access Scope="LocalVariable" UId="58">
+          <Symbol UId="59">
+            <Component Name="ContinuousPusher_Nb" UId="60" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="61" />
+      </Component>
+      <Token Text="." UId="62" />
+      <Component Name="Safety_Outputs" UId="63" />
+      <Token Text="." UId="64" />
+      <Component Name="Unlock_Guard_Switch02" UId="65" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="66" />
+  <NewLine Num="2" UId="67" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="68">
+    <Text UId="69">Reset Lamps</Text>
+  </LineComment>
+  <NewLine Num="1" UId="70" />
+  <Access Scope="LocalVariable" UId="71">
+    <Symbol UId="72">
+      <Component Name="OP_ResetLamp01" UId="73" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="74" />
+  <Token Text=":=" UId="75" />
+  <Blank Num="1" UId="76" />
+  <Access Scope="GlobalVariable" UId="77">
+    <Symbol UId="78">
+      <Component Name="ContinuousPusher_Diag" UId="79" />
+      <Token Text="." UId="80" />
+      <Component Name="Pusher" UId="81">
+        <Token Text="[" UId="82" />
+        <Access Scope="LocalVariable" UId="83">
+          <Symbol UId="84">
+            <Component Name="ContinuousPusher_Nb" UId="85" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="86" />
+      </Component>
+      <Token Text="." UId="87" />
+      <Component Name="Outputs" UId="88" />
+      <Token Text="." UId="89" />
+      <Component Name="OP_ResetLamp01" UId="90" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="91" />
+  <NewLine Num="1" UId="92" />
+  <Access Scope="LocalVariable" UId="93">
+    <Symbol UId="94">
+      <Component Name="Op_ResetLamp02" UId="95" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="96" />
+  <Token Text=":=" UId="97" />
+  <Blank Num="1" UId="98" />
+  <Access Scope="GlobalVariable" UId="99">
+    <Symbol UId="100">
+      <Component Name="ContinuousPusher_Diag" UId="101" />
+      <Token Text="." UId="102" />
+      <Component Name="Pusher" UId="103">
+        <Token Text="[" UId="104" />
+        <Access Scope="LocalVariable" UId="105">
+          <Symbol UId="106">
+            <Component Name="ContinuousPusher_Nb" UId="107" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="108" />
+      </Component>
+      <Token Text="." UId="109" />
+      <Component Name="Outputs" UId="110" />
+      <Token Text="." UId="111" />
+      <Component Name="OP_ResetLamp02" UId="112" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="113" />
+  <NewLine Num="2" UId="114" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="115">
+    <Text UId="116">Access Lamps</Text>
+  </LineComment>
+  <NewLine Num="1" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="OP_AccessLamp01" UId="120" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="121" />
+  <Token Text=":=" UId="122" />
+  <Blank Num="1" UId="123" />
+  <Access Scope="GlobalVariable" UId="124">
+    <Symbol UId="125">
+      <Component Name="ContinuousPusher_Diag" UId="126" />
+      <Token Text="." UId="127" />
+      <Component Name="Pusher" UId="128">
+        <Token Text="[" UId="129" />
+        <Access Scope="LocalVariable" UId="130">
+          <Symbol UId="131">
+            <Component Name="ContinuousPusher_Nb" UId="132" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="133" />
+      </Component>
+      <Token Text="." UId="134" />
+      <Component Name="Outputs" UId="135" />
+      <Token Text="." UId="136" />
+      <Component Name="OP_AccessLamp01" UId="137" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="138" />
+  <NewLine Num="1" UId="139" />
+  <Access Scope="LocalVariable" UId="140">
+    <Symbol UId="141">
+      <Component Name="OP_AccessLamp02" UId="142" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="143" />
+  <Token Text=":=" UId="144" />
+  <Blank Num="1" UId="145" />
+  <Access Scope="GlobalVariable" UId="146">
+    <Symbol UId="147">
+      <Component Name="ContinuousPusher_Diag" UId="148" />
+      <Token Text="." UId="149" />
+      <Component Name="Pusher" UId="150">
+        <Token Text="[" UId="151" />
+        <Access Scope="LocalVariable" UId="152">
+          <Symbol UId="153">
+            <Component Name="ContinuousPusher_Nb" UId="154" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="155" />
+      </Component>
+      <Token Text="." UId="156" />
+      <Component Name="Outputs" UId="157" />
+      <Token Text="." UId="158" />
+      <Component Name="OP_AccessLamp02" UId="159" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="160" />
+  <NewLine Num="2" UId="161" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="162">
+    <Text UId="163">Signal Tower</Text>
+  </LineComment>
+  <NewLine Num="1" UId="164" />
+  <Access Scope="LocalVariable" UId="165">
+    <Symbol UId="166">
+      <Component Name="ST_GreenLamp" UId="167" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="168" />
+  <Token Text=":=" UId="169" />
+  <Blank Num="1" UId="170" />
+  <Access Scope="GlobalVariable" UId="171">
+    <Symbol UId="172">
+      <Component Name="ContinuousPusher_Diag" UId="173" />
+      <Token Text="." UId="174" />
+      <Component Name="Pusher" UId="175">
+        <Token Text="[" UId="176" />
+        <Access Scope="LocalVariable" UId="177">
+          <Symbol UId="178">
+            <Component Name="ContinuousPusher_Nb" UId="179" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="180" />
+      </Component>
+      <Token Text="." UId="181" />
+      <Component Name="Outputs" UId="182" />
+      <Token Text="." UId="183" />
+      <Component Name="ST_GreenLamp" UId="184" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="185" />
+  <NewLine Num="1" UId="186" />
+  <Access Scope="LocalVariable" UId="187">
+    <Symbol UId="188">
+      <Component Name="ST_YellowLamp" UId="189" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="190" />
+  <Token Text=":=" UId="191" />
+  <Blank Num="1" UId="192" />
+  <Access Scope="GlobalVariable" UId="193">
+    <Symbol UId="194">
+      <Component Name="ContinuousPusher_Diag" UId="195" />
+      <Token Text="." UId="196" />
+      <Component Name="Pusher" UId="197">
+        <Token Text="[" UId="198" />
+        <Access Scope="LocalVariable" UId="199">
+          <Symbol UId="200">
+            <Component Name="ContinuousPusher_Nb" UId="201" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="202" />
+      </Component>
+      <Token Text="." UId="203" />
+      <Component Name="Outputs" UId="204" />
+      <Token Text="." UId="205" />
+      <Component Name="ST_YellowLamp" UId="206" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="207" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>2. ContinuousPusher_Outputs</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="ContinuousPusher_Nb" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="CmdReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Ste_Aborted" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="Ste_Resetting" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="On_Auto_Stopping" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="AL_COM_DFE" />
+      </Symbol>
+    </Access>
+    <Call UId="30">
+      <CallInfo Name="3. Continuous Pusher Drive Setup" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="31">
+          <Component Name="2. SM01_Pusher_Instance" />
+        </Instance>
+        <Parameter Name="ContinuousPusher_Nb" Section="Input" Type="Int" />
+        <Parameter Name="Mode_Production" Section="Input" Type="Bool" />
+        <Parameter Name="Mode_Manual" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Execute" Section="Input" Type="Bool" />
+        <Parameter Name="SystStart.Cmd_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Aborted" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Reseting" Section="Input" Type="Bool" />
+        <Parameter Name="On_Auto_Stopping" Section="Input" Type="Bool" />
+        <Parameter Name="AL_COM_DFE" Section="Input" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <Powerrail />
+      <NameCon UId="30" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="30" Name="ContinuousPusher_Nb" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="30" Name="Mode_Production" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="23" />
+      <NameCon UId="30" Name="Mode_Manual" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="SysStart.State.Execute" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="SystStart.Cmd_Reset" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="26" />
+      <NameCon UId="30" Name="SysStart.State.Aborted" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="27" />
+      <NameCon UId="30" Name="SysStart.State.Reseting" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="28" />
+      <NameCon UId="30" Name="On_Auto_Stopping" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="29" />
+      <NameCon UId="30" Name="AL_COM_DFE" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="32" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>3. Continuous Pusher Drive Setup</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="ContinuousPusher_Nb" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="On_Auto" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Ste_Resetting" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Ste_Aborted" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="CmdReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="M01-Runnning" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="M02-Running" />
+      </Symbol>
+    </Access>
+    <Call UId="31">
+      <CallInfo Name="4. Continuous Pusher Control" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="32">
+          <Component Name="3. Continuous Pusher Control_Instance" />
+        </Instance>
+        <Parameter Name="ContinuousPusher_Nb" Section="Input" Type="Int" />
+        <Parameter Name="On_Auto" Section="Input" Type="Bool" />
+        <Parameter Name="Mode_Manual" Section="Input" Type="Bool" />
+        <Parameter Name="Mode_Production" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Resetting" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Aborted" Section="Input" Type="Bool" />
+        <Parameter Name="SystStart.Cmd_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Execute" Section="Input" Type="Bool" />
+        <Parameter Name="M01Running" Section="Input" Type="Bool" />
+        <Parameter Name="M02Running" Section="Input" Type="Bool" />
+        <Parameter Name="StopM01M02" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="34">
+      <Powerrail />
+      <NameCon UId="31" Name="en" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="31" Name="ContinuousPusher_Nb" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="22" />
+      <NameCon UId="31" Name="On_Auto" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="23" />
+      <NameCon UId="31" Name="Mode_Manual" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="Mode_Production" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="SysStart.State.Resetting" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="26" />
+      <NameCon UId="31" Name="SysStart.State.Aborted" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="27" />
+      <NameCon UId="31" Name="SystStart.Cmd_Reset" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="28" />
+      <NameCon UId="31" Name="SysStart.State.Execute" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="29" />
+      <NameCon UId="31" Name="M01Running" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="30" />
+      <NameCon UId="31" Name="M02Running" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="31" Name="StopM01M02" />
+      <OpenCon UId="33" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="39" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>4. Continuous Pusher Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="ContinuousPusher_Nb" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="On_Auto" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="On_Auto_Stopping" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Manual" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Production" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Ste_Resetting" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="Ste_Aborted" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="CmdReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="Safety_Relay" />
+      </Symbol>
+    </Access>
+    <Call UId="31">
+      <CallInfo Name="5. Continuous Pusher Alarms Control" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="32">
+          <Component Name="4. Continuous Pusher Alarms Control_Instance" />
+        </Instance>
+        <Parameter Name="ContinuousPusher_Nb" Section="Input" Type="Int" />
+        <Parameter Name="On_Auto" Section="Input" Type="Bool" />
+        <Parameter Name="On_Auto_Stopping" Section="Input" Type="Bool" />
+        <Parameter Name="Mode_Manual" Section="Input" Type="Bool" />
+        <Parameter Name="Mode_Production" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Resetting" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Aborted" Section="Input" Type="Bool" />
+        <Parameter Name="SystStart.Cmd_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="SysStart.State.Execute" Section="Input" Type="Bool" />
+        <Parameter Name="SafetyRelay" Section="Input" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="33">
+      <Powerrail />
+      <NameCon UId="31" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="31" Name="ContinuousPusher_Nb" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="31" Name="On_Auto" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="23" />
+      <NameCon UId="31" Name="On_Auto_Stopping" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="Mode_Manual" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="Mode_Production" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="26" />
+      <NameCon UId="31" Name="SysStart.State.Resetting" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="27" />
+      <NameCon UId="31" Name="SysStart.State.Aborted" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="28" />
+      <NameCon UId="31" Name="SystStart.Cmd_Reset" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="29" />
+      <NameCon UId="31" Name="SysStart.State.Execute" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="30" />
+      <NameCon UId="31" Name="SafetyRelay" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="40" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>5. Continuous Pusher Alarms Control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="43" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="6. Continuous Pusher HMI" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="22">
+          <Component Name="5. Continuous Pusher HMI_Instance" />
+        </Instance>
+        <Parameter Name="On_Auto" Section="Input" Type="Bool" />
+        <Parameter Name="On_Manual" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_VIS_Control_Zone" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_VIS_MMO_ZoneX" Section="Input" Type="Bool" />
+        <Parameter Name="Error_Bit_Common" Section="Input" Type="Bool" />
+        <Parameter Name="Error_Bit_Zone" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_VIS_Jog_ZoneX" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_VIS_Alarm_ZoneX" Section="Output" Type="Bool" />
+        <Parameter Name="HMI_App_Reset_ZoneX" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="23" />
+      <NameCon UId="21" Name="On_Auto" />
+    </Wire>
+    <Wire UId="34">
+      <OpenCon UId="24" />
+      <NameCon UId="21" Name="On_Manual" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="25" />
+      <NameCon UId="21" Name="HMI_VIS_Control_Zone" />
+    </Wire>
+    <Wire UId="36">
+      <OpenCon UId="26" />
+      <NameCon UId="21" Name="HMI_VIS_MMO_ZoneX" />
+    </Wire>
+    <Wire UId="37">
+      <OpenCon UId="27" />
+      <NameCon UId="21" Name="Error_Bit_Common" />
+    </Wire>
+    <Wire UId="38">
+      <OpenCon UId="28" />
+      <NameCon UId="21" Name="Error_Bit_Zone" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="21" Name="HMI_VIS_Jog_ZoneX" />
+      <OpenCon UId="29" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="21" Name="HMI_VIS_Alarm_ZoneX" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="21" Name="HMI_App_Reset_ZoneX" />
+      <OpenCon UId="31" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="44" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>6. Continuous Pusher HMI</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="49" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Ste_Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Ste_Stopped" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Ste_Aborted" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Motors" />
+        <Component Name="PusherServo" />
+        <Component Name="Running" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Clock_1.25Hz" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Safety_Inputs" />
+        <Component Name="Guard_Switch_Door01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Safety_Inputs" />
+        <Component Name="Guard_Switch_Door02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Control" />
+        <Component Name="TON_Access1" />
+        <Component Name="Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Outputs" />
+        <Component Name="OP_AccessLamp01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Outputs" />
+        <Component Name="OP_AccessLamp02" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Safety_Outputs" />
+        <Component Name="Unlock_Guard_Switch01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Safety_Outputs" />
+        <Component Name="Unlock_Guard_Switch02" />
+      </Symbol>
+    </Access>
+    <Call UId="33">
+      <CallInfo Name="7. Access Doorss" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="34">
+          <Component Name="7. Access Doors_Instance" />
+        </Instance>
+        <Parameter Name="SteExecute" Section="Input" Type="Bool" />
+        <Parameter Name="SteStopped" Section="Input" Type="Bool" />
+        <Parameter Name="SteAborted" Section="Input" Type="Bool" />
+        <Parameter Name="MotorsRunning" Section="Input" Type="Bool" />
+        <Parameter Name="Clock" Section="Input" Type="Bool" />
+        <Parameter Name="GS01" Section="Input" Type="Bool" />
+        <Parameter Name="GS02" Section="Input" Type="Bool" />
+        <Parameter Name="AccessRequest01" Section="Input" Type="Bool" />
+        <Parameter Name="YellowLamp01" Section="Output" Type="Bool" />
+        <Parameter Name="YellowLamp02" Section="Output" Type="Bool" />
+        <Parameter Name="GSC01" Section="Output" Type="Bool" />
+        <Parameter Name="GSC02" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="33" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="33" Name="SteExecute" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="SteStopped" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="23" />
+      <NameCon UId="33" Name="SteAborted" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="24" />
+      <NameCon UId="33" Name="MotorsRunning" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="25" />
+      <NameCon UId="33" Name="Clock" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="GS01" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="27" />
+      <NameCon UId="33" Name="GS02" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="28" />
+      <NameCon UId="33" Name="AccessRequest01" />
+    </Wire>
+    <Wire UId="44">
+      <NameCon UId="33" Name="YellowLamp01" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="33" Name="YellowLamp02" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="33" Name="GSC01" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="47">
+      <NameCon UId="33" Name="GSC02" />
+      <IdentCon UId="32" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>7. Access Doors</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="51" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="ContinuousPusher_Nb" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="StateValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Clock_1.25Hz" />
+      </Symbol>
+    </Access>
+    <Call UId="24">
+      <CallInfo Name="8. System Lamps" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="25">
+          <Component Name="8. System Lamps_Instance" />
+        </Instance>
+        <Parameter Name="ContinuousPusher_Nb" Section="Input" Type="Int" />
+        <Parameter Name="StateValue" Section="Input" Type="Int" />
+        <Parameter Name="Clock_1.25Hz" Section="Input" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="ContinuousPusher_Nb" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="StateValue" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="23" />
+      <NameCon UId="24" Name="Clock_1.25Hz" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="52" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="55" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="56" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>8. System Lamps</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="58" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="ContinuousPusher_Nb" />
+      </Symbol>
+    </Access>
+    <Call UId="22">
+      <CallInfo Name="9. Error &amp; Blinking Bits" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="23">
+          <Component Name="9. Error &amp; Blinking Bits_Instance" />
+        </Instance>
+        <Parameter Name="ContinuousPusher_Nb" Section="Input" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="24">
+      <Powerrail />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="ContinuousPusher_Nb" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="59" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>9. Error &amp; Blinking Bits</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="5F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="AL_COM_DFE" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="ContinuousPusher_Diag" />
+        <Component Name="Pusher" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="ContinuousPusher_Nb" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Inputs" />
+        <Component Name="GateWay_Conn_Status" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="23">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="24" />
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="23" Name="in" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="operand" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="23" Name="out" />
+      <NameCon UId="24" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="60" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="61" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="62" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="63" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>AL COM DFE</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="65" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="66" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="67" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="68" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="69" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="6D" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6E" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>ContinuousPusher_Main</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6F" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

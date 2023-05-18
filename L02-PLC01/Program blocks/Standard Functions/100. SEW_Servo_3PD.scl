@@ -1,0 +1,172 @@
+﻿FUNCTION_BLOCK "100. SEW_Servo_3PD"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+   VAR_INPUT 
+      IO_ADDRESS : Int;
+      VELOCITY { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      TARGET_POSITION : DInt;
+      Lin_Numerator : DInt := 1;
+      Lin_Denominator : DInt := 1;
+      IPOS_factor : DInt;
+   END_VAR
+
+   VAR_OUTPUT 
+      STATUS_WORD1 : DInt;   // % of maximum value
+      FAULT_NO : Int;
+      Actual_Position : DInt;
+   END_VAR
+
+   VAR 
+      Stepping : Bool;   // Virtual Input 5
+      Control_bit_13 : Bool;   // Virtual Input 6
+      Control_bit_14 : Bool;   // Virtual Input 7
+      Status_bit11 : Bool;   // Virtual Output 4
+      Status_bit12 : Bool;   // Virtual Output 5
+      Status_bit13 : Bool;   // Virtual Output 6
+      Status_bit14 : Bool;   // Virtual Output 7
+      Status_bit15 : Bool;   // Virtual Output 8
+      Control_Inhibit : Bool;   // Control Inhibit = "1" / Enable = "0"
+      Enable_Rapid_Stop { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;   // Enable = "1" / Rapid Stop = "0"
+      Hold_Control : Bool;
+      Ramp_Generator : Bool;
+      Parameter_Set : Bool;
+      Reset : Bool;   // Reset Pending Fault = "1" / Not Active = "0"
+      Reserved : Bool;
+      Start : Bool;   // Virtual Input 1: IPOS Start
+      Manual_CW : Bool;   // Virtual Input 2: IPOS Manual_CW
+      Manual_CCW : Bool;   // Virtual Input 3: IPOS Manual_CCW
+      Reference_Travel : Bool;   // Virtual Input 4: IPOS Homing Set
+      Write_Request : Bool;   // Virtual Input 8: IPOS Write Request
+      Enable_Output_Stage : Bool;
+      Inverder_Ready : Bool;
+      PO_Data_Enable : Bool;
+      Active_Ramp_Generator : Bool;
+      Active_Parameter : Bool;
+      Fault : Bool;
+      Limit_Switch_CW : Bool;
+      Limit_Switch_CCW : Bool;
+      Reference_OK : Bool;   // Virtual Output 1: Reference_OK
+      In_Position : Bool;   // Virtual Output 2: in_position
+      Current_Limit : Bool;   // Virtual Output 3: Current_Limit
+   END_VAR
+
+   VAR_TEMP 
+      K : Int;
+      A : Int;
+      InBool : Array[0..15] of Bool;
+      OutBool : Array[0..15] of Bool;
+      H511_WORD : Word;
+      PIDATA3_WORD : Word;
+      Temp_Target : DInt;
+   END_VAR
+
+
+BEGIN
+	//***************************************    PI DATA     ***************************************
+	// STATUS WORD 2 PI1
+	#A := #IO_ADDRESS+1;
+	
+	FOR #K := 0 TO 7 DO
+	    #InBool[#K] := PEEK_BOOL(area := 16#81, dbNumber := 0, byteOffset := #A, bitOffset := #K);
+	END_FOR;
+	
+	#A := #IO_ADDRESS;
+	FOR #K := 8 TO 15 DO
+	    #InBool[#K] := PEEK_BOOL(area := 16#81, dbNumber := 0, byteOffset := #A, bitOffset := #K-8);
+	END_FOR;
+	
+	#Enable_Output_Stage := #InBool[0];
+	#Inverder_Ready := #InBool[1];
+	#PO_Data_Enable := #InBool[2];
+	#Active_Ramp_Generator := #InBool[3];
+	#Active_Parameter := #InBool[4];
+	#Fault := #InBool[5];
+	#Limit_Switch_CCW := #InBool[6];
+	#Limit_Switch_CW := #InBool[7];
+	#Reference_OK := #InBool[8];
+	#In_Position := #InBool[9];
+	#Current_Limit := #InBool[10];
+	#Status_bit11 := #InBool[11];
+	#Status_bit12 := #InBool[12];
+	#Status_bit13 := #InBool[13];
+	#Status_bit14 := #InBool[14];
+	#Status_bit15 := #InBool[15];
+	
+	//ACTUAL POSITION PI2
+	#A := #IO_ADDRESS + 2;
+	#H511_WORD := PEEK_WORD(area := 16#81, dbNumber := 0, byteOffset := #A);
+	#Actual_Position := ((WORD_TO_INT(#H511_WORD) * #IPOS_factor) * #Lin_Numerator) / #Lin_Denominator;
+	
+	//STATUS WORD IN % PI3
+	#A := #IO_ADDRESS + 4;
+	#PIDATA3_WORD := PEEK_WORD(area := 16#81, dbNumber := 0, byteOffset := #A);
+	#STATUS_WORD1 := WORD_TO_INT(#PIDATA3_WORD) / 10;
+	
+	//***************************************    PO DATA     ***************************************
+	// CONTROL WORD PO1
+	#OutBool[0] := #Control_Inhibit;
+	#OutBool[1] := #Enable_Rapid_Stop;
+	//#OutBool[2] := ;
+	#OutBool[3] := #Hold_Control;
+	#OutBool[4] := #Ramp_Generator;
+	#OutBool[5] := #Parameter_Set;
+	#OutBool[6] := #Reset;
+	//#OutBool[7] := ;
+	#OutBool[8] := #Start;
+	#OutBool[9] := #Manual_CW;
+	#OutBool[10] := #Manual_CCW;
+	#OutBool[11] := #Reference_Travel;
+	#OutBool[12] := #Stepping;
+	#OutBool[13] := #Control_bit_13;
+	#OutBool[14] := #Control_bit_14;
+	#OutBool[15] := #Write_Request;
+	
+	#A := #IO_ADDRESS;
+	FOR #K := 8 TO 15 DO
+	    POKE_BOOL(area := 16#82,
+	              dbNumber := 0,
+	              byteOffset := #A,
+	              bitOffset := (#K - 8),
+	              value := #OutBool[#K]);
+	END_FOR;
+	
+	#A := #IO_ADDRESS + 1;
+	FOR #K := 0 TO 7 DO
+	    POKE_BOOL(area := 16#82,
+	              dbNumber := 0,
+	              byteOffset := #A,
+	              bitOffset := #K,
+	              value := #OutBool[#K]);
+	END_FOR;
+	
+	//Target Position PO2
+	#A := #IO_ADDRESS + 2;
+	#Temp_Target := (#TARGET_POSITION * #Lin_Denominator) / #Lin_Numerator / #IPOS_factor;
+	POKE(area := 16#82,
+	     dbNumber := 0,
+	     byteOffset := #A,
+	     value := DINT_TO_WORD(#Temp_Target));
+	
+	//SETPOINT SPEED PO3
+	#A := #IO_ADDRESS + 4;
+	POKE(area := 16#82,
+	     dbNumber := 0,
+	     byteOffset := #A,
+	     value := INT_TO_WORD(#VELOCITY));
+	
+	IF #Fault THEN
+	    #FAULT_NO := 3;
+	    ;
+	ELSE
+	    IF #Enable_Output_Stage & NOT #In_Position & #Reference_OK THEN
+	        #FAULT_NO := -1;
+	        ;
+	    ELSE
+	        #FAULT_NO := 0;
+	        ;
+	    END_IF;
+	    ;
+	END_IF;
+	
+END_FUNCTION_BLOCK
+

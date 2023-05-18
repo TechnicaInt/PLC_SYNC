@@ -1,0 +1,183 @@
+﻿FUNCTION_BLOCK "SEW_LTEB"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      IO_ADDRESS : Int;
+      ENABLE_RAPID_STOP { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      RESET { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      SETPOINT_SPEED { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      RAMP : Int := 2;
+      NominalCurrent : Real;
+   END_VAR
+
+   VAR_OUTPUT 
+      ACTUAL_SPEED : Int;
+      ACTUAL_CURRENT : Int;
+      FAULT_NO : Int;
+      ACTUAL_CURRENT_REAL : Real;
+   END_VAR
+
+   VAR 
+      DRIVE_STATUS : Byte;
+      OUTPUT_STAGE_ENABLED : Bool;
+      INVERTER_READY : Bool;
+      PO_DATA_ENABLED : Bool;
+      RESERVED : Bool;
+      RESERVED_1 : Bool;
+      FAULT_OF_AXIS : Bool;
+      RESERVED_2 { S7_SetPoint := 'True'} : Bool;
+      RESERVED_3 : Bool;
+      "CONTROL BIT" : Bool;
+      FAULT_CODE : String;
+   END_VAR
+
+   VAR_TEMP 
+      J : Int;
+      K : Int;
+      L : Int;
+      M : Int;
+      PIDATA2 : Int;
+      PIDATA3 : Int;
+      A : Int;
+      C : Int;
+      D : Int;
+      InBool : Array[0..7] of Bool;
+      OutBool : Array[0..7] of Bool;
+      PODATA2 : Word;
+      PODATA3 : Word;
+      TEMP2 : Word;
+      TEMP3 : Word;
+      CASE_NUMBER : Int;
+      TEMP4 : Real;
+   END_VAR
+
+
+BEGIN
+	FOR #M := #IO_ADDRESS TO #IO_ADDRESS + 1 DO
+	    FOR #L := 0 TO 7 DO
+	        #InBool[#L] := PEEK_BOOL(area := 16#81, dbNumber := 0, byteOffset := #M, bitOffset := #L);
+	    END_FOR;
+	END_FOR;
+	
+	#DRIVE_STATUS := PEEK_BYTE(area := 16#81, dbNumber := 0, byteOffset := #IO_ADDRESS);
+	
+	#OUTPUT_STAGE_ENABLED := #InBool[0];
+	#INVERTER_READY := #InBool[1];
+	#PO_DATA_ENABLED := #InBool[2];
+	#FAULT_OF_AXIS := #InBool[5];
+	
+	// DRIVE STATUS String
+	#CASE_NUMBER := #DRIVE_STATUS;
+	IF #FAULT_OF_AXIS THEN
+	    CASE #CASE_NUMBER OF
+	        1:
+	            #FAULT_CODE := 'Drive Output Over Current';
+	        4:
+	            #FAULT_CODE := 'NO Enable/NO Run';
+	        6:
+	            #FAULT_CODE := 'Input Phase Loss';
+	        7:
+	            #FAULT_CODE := 'DC Bus Overvoltage';
+	        8:
+	            #FAULT_CODE := 'Motor Overload';
+	        9:
+	            #FAULT_CODE := 'Parameter Setting to Factory Default';
+	        11:
+	            #FAULT_CODE := 'Over Temperature Trip';
+	        26:
+	            #FAULT_CODE := 'External Trip';
+	        47:
+	            #FAULT_CODE := 'Communication Link (SBus) Loss Trip';
+	        113:
+	            #FAULT_CODE := 'Analog Input Error: Input is Less than 2.5mA';
+	        117:
+	            #FAULT_CODE := 'Under Temperature Trip';
+	        198:
+	            #FAULT_CODE := 'DC Bus Undervoltage';
+	        200:
+	            #FAULT_CODE := 'General Error / Power Stage Error';
+	    END_CASE;
+	ELSE
+	    CASE #CASE_NUMBER OF
+	        1:
+	            #FAULT_CODE := 'Output Stage Disabled';
+	        2:
+	            #FAULT_CODE := 'NO Enable/NO Run';
+	        4:
+	            #FAULT_CODE := 'Enable/Run';
+	        5:
+	            #FAULT_CODE := 'Factory Setting is Active';
+	    END_CASE;
+	END_IF;
+	
+	
+	//ACTUAL SPEED PI2
+	#J := #IO_ADDRESS + 2;
+	#TEMP2 := PEEK_WORD(area := 16#81, dbNumber := 0, byteOffset := #J);
+	#PIDATA2 := WORD_TO_INT (#TEMP2);
+	#ACTUAL_SPEED := #PIDATA2/164;
+	
+	//ACTUAL CURRENT IN % PI3
+	#K := #IO_ADDRESS + 4;
+	#TEMP3 := PEEK_WORD(area := 16#81, dbNumber := 0, byteOffset := #K);
+	#PIDATA3 := WORD_TO_INT (#TEMP3) ;
+	#ACTUAL_CURRENT := #PIDATA3/164;
+	#ACTUAL_CURRENT_REAL:=(#ACTUAL_CURRENT*#NominalCurrent)/100;
+	
+	
+	//CONTROL WORD PO1
+	#A := #IO_ADDRESS + 1;
+	
+	#OutBool[0] := #ENABLE_RAPID_STOP;
+	POKE_BOOL(area := 16#82,
+	          dbNumber := 0,
+	          byteOffset := #A,
+	          bitOffset := 1,
+	          value := #OutBool[0]);
+	#OutBool[1] := #"CONTROL BIT";
+	POKE_BOOL(area := 16#82,
+	          dbNumber := 0,
+	          byteOffset := #A,
+	          bitOffset := 2,
+	          value := #OutBool[1]);
+	#OutBool[2] := #RESET;
+	POKE_BOOL(area := 16#82,
+	          dbNumber := 0,
+	          byteOffset := #A,
+	          bitOffset := 6,
+	          value := #OutBool[2]);
+	
+	
+	
+	//SETPOINT SPEED PO2
+	#C := #IO_ADDRESS + 2;
+	#PODATA2 := INT_TO_WORD(#SETPOINT_SPEED * 164);
+	POKE(area := 16#82,
+	     dbNumber := 0,
+	     byteOffset := #C,
+	     value := #PODATA2);
+	
+	// RAMP PO3
+	#D := #IO_ADDRESS + 4;
+	#PODATA3 := INT_TO_WORD(#RAMP * 500);
+	POKE(area := 16#82,
+	     dbNumber := 0,
+	     byteOffset := #D,
+	     value := #PODATA3);
+	
+	IF #FAULT_OF_AXIS THEN
+	    #FAULT_NO := 3;
+	    ;
+	ELSE
+	    IF #OUTPUT_STAGE_ENABLED THEN
+	        #FAULT_NO := -1;
+	        ;
+	    ELSE
+	        #FAULT_NO := 0;
+	        ;
+	    END_IF;
+	    ;
+	END_IF;
+	
+END_FUNCTION_BLOCK
+

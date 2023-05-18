@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2023-05-18T09:06:46.1781848Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="Pusher" Datatype="Array[1..&quot;Pusher_Nb&quot;] of &quot;ContinuousPusherDiag&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Inputs" Datatype="Struct"><Member Name="OP_ResetPB01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_ResetPB02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_AccessPB01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_AccessPB02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="PE_Back_Detection" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="PE_Front_Detection" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="PE_90DegClearance" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="PE_0DegClearance" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="IP_Homing_PushingServo" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="SSW_Manual" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="SSW_Production" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="SSW_CW" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="SSW_CCW" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="GateWay_Conn_Status" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member></Member><Member Name="Safety_Inputs" Datatype="Struct"><Member Name="Emergency_Stop01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Emergency_Stop02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Guard_Switch_Door01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Guard_Switch_Door02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Member><Member Name="Outputs" Datatype="Struct"><Member Name="OP_ResetLamp01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_ResetLamp02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_AccessLamp01" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OP_AccessLamp02" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="ST_GreenLamp" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="ST_YellowLamp" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Member><Member Name="Safety_Outputs" Datatype="Struct"><Member Name="Unlock_Guard_Switch01" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="Unlock_Guard_Switch02" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member></Member><Member Name="Motors" Datatype="Struct"><Member Name="PusherServo" Datatype="&quot;Servo_SEW_3DP&quot;"><Sections><Section Name="None"><Member Name="Jog" Datatype="Struct"><Member Name="CW" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="CCW" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Member><Member Name="Velocity" Datatype="Struct"><Member Name="Manual" Datatype="Int"><Subelement Path="1"><StartValue>100</StartValue></Subelement></Member></Member><Member Name="FB_Inputs" Datatype="Struct"><Member Name="Lin_Numerator" Datatype="DInt"><Subelement Path="1"><StartValue>2005</StartValue></Subelement></Member><Member Name="Lin_Denominator" Datatype="DInt"><Subelement Path="1"><StartValue>10</StartValue></Subelement></Member><Member Name="Start" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Member><Member Name="FB_Outputs" Datatype="Struct"><Member Name="Actual_Speed" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="Actual_Current" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="Actual_Position" Datatype="DInt"><Subelement Path="1"><StartValue>-894</StartValue></Subelement></Member><Member Name="Fault_Nb" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="In_position" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="Reference_Ok" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member><Member Name="Fault" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Status_Word1" Datatype="DInt"><Subelement Path="1"><StartValue>256</StartValue></Subelement></Member><Member Name="Inverder_Ready" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member></Member><Member Name="At_Pos" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Running" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Homing" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Safety_Interlock" Datatype="Bool"><Subelement Path="1"><StartValue>TRUE</StartValue></Subelement></Member></Section></Sections></Member></Member><Member Name="Control" Datatype="Struct"><Member Name="PusherServo" Datatype="Struct"><Member Name="Go_Pushing_Position" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="At_Pushing_Position" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Pos_Pushing" Datatype="Int"><Subelement Path="1"><StartValue>445</StartValue></Subelement></Member><Member Name="Speed_Pushing" Datatype="Int"><Subelement Path="1"><StartValue>2000</StartValue></Subelement></Member><Member Name="Tolerance_AtPushingPos" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="Init%_Speed" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member></Member><Member Name="Detection_Small_Carton" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Detection_Big_Carton" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Pushing_Done" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="TON_Access1" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time"><Subelement Path="1"><StartValue>T#500ms</StartValue></Subelement></Member><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TON_Access2" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time"><Subelement Path="1"><StartValue>T#2S</StartValue></Subelement></Member><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TOF_DelayedStart" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time"><Subelement Path="1"><StartValue>T#1S</StartValue></Subelement></Member><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Member><Member Name="Dry_Run" Datatype="Struct"><Member Name="Activate" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="States" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member></Member><Member Name="Initialization" Datatype="Struct"><Member Name="States" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="Required" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Done" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Initialize" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Member><Member Name="Reset_Required" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="InputSignals" Datatype="Struct"><Member Name="Reset" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Conv_Running" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Conv_HMI_Frequency" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member><Member Name="Conv_Speed_Percentage" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member></Member><Member Name="OutputSignals" Datatype="Struct"><Member Name="Stop_Conveyor" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Conv_Min_Running_Speed" Datatype="Int"><Subelement Path="1"><StartValue>0</StartValue></Subelement></Member></Member><Member Name="Blinking_Bit" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Error_Bit" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="OptimizeTest" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member><Member Name="Disable_Pusher" Datatype="Bool"><Subelement Path="1"><StartValue>FALSE</StartValue></Subelement></Member></Section></Sections></Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ContinuousPusher_Diag</Name>
+      <Number>132</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

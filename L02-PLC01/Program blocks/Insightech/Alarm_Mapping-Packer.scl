@@ -1,0 +1,32 @@
+﻿FUNCTION_BLOCK "Alarm_Mapping-Packer"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Source_DB : Int;   // DB number of the source alarm DB
+      Start : Int;   // Start Index in the mapped alarm array
+      End : Int;   // End Index in the mapped alarm array 
+      Start_Byte_Source_DB : Int;   // Start Byte of the source alarm DB (Offset Byte)
+   END_VAR
+
+   VAR_IN_OUT 
+      Alarms_Array : Array[0.."ALARM_ARRAY_SIZE"] of "ALARM";
+   END_VAR
+
+   VAR 
+      W : Int;
+   END_VAR
+
+
+BEGIN
+	
+	FOR #W :=  #Start TO #End DO
+	#Alarms_Array[#W].Active:= PEEK_BOOL( area := 16#84,
+	                                       dbNumber := #Source_DB,
+	                                       byteOffset := #Start_Byte_Source_DB +((#W-#Start) / 8),
+	                                       bitOffset := (#W-#Start) MOD 8);
+	  #Alarms_Array[#W].Number := (#W);
+	      
+	    END_FOR;
+	  
+END_FUNCTION_BLOCK
+
